@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+	<head>
+
+		<meta charset="UTF-8">
+	 	<title>CrystalsCollector</title>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Favicon for the webpage -->
+	 	<link rel="icon" href="assets/images/green.png" type="image/jpeg" sizes="16x16">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+		<!-- Font Awesome icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+	<body>
+
+		<div class="container text-center">
+
+			<div id="game-title" class="row mt-2">
+				<div class="col-md-8 offset-md-2 offset-md-right-2">
+					<h1>CrystalsCollector!</h1>
+				</div>
+			</div>
+
+			<div id="game-instructions" class="row mt-2">
+				<div class="col-md-8 offset-md-2 offset-md-right-2">
+					<p>You will be given a random number at the start of the game.</p>
+
+					<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+
+					<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+
+					<p>The value of each crystal is hidden from you until you click on it.</p>
+
+					<p>Each time when the game starts, the game will change the values of each crystal.</p>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-4 offset-md-3" id="target-number-container">
+					<h4>Target Number: <span id="target-number"></span></h4>
+				</div>
+
+				<div class="col-md-2 offset-md-right-3 game-statistics">
+					<p id="wins-container">Wins: <span id="wins"></span></p>
+					<p id="losses-container">Losses: <span id="losses"></span></p>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-2 offset-md-2">
+					<button type="button" id="crystal-1" value="0" class="btn btn-default crystal">
+						<img class="crystal-image" src="assets/images/blue.jpg">
+					</button>
+				</div>
+				<div class="col-md-2">
+					<button type="button" id="crystal-2" value="0" class="btn btn-default crystal">
+						<img class="crystal-image" src="assets/images/orange.jpg">
+					</button>
+				</div>
+				<div class="col-md-2">
+					<button type="button" id="crystal-3" value="0" class="btn btn-default crystal">
+						<img class="crystal-image" src="assets/images/red.png">
+					</button>
+				</div>
+				<div class="col-md-2 offset-md-right-2">
+					<button type="button" id="crystal-4" value="0" class="btn btn-default crystal">
+						<img class="crystal-image" src="assets/images/white.jpg">
+					</button>
+				</div>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col-md-6 offset-md-3 offset-md-right-3">
+					<h4>Your total score is: <span id="total-score"></span></h4>
+				</div>
+			</div>
+
+			<!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+			<video autoplay loop id="video-background" muted plays-inline>
+	  			<source src="assets/videos/blue motion background.mp4" type="video/mp4">
+			</video>
+
+		</div>
+
+		<!-- Load the associated JavaScript files -->
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+	</body>
+
+</html>
